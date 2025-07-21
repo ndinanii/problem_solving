@@ -1,5 +1,3 @@
-** start of script.js **
-
 let lunches = [];
 let str;
 
@@ -61,8 +59,3 @@ function showLunchMenu(lunches){
  console.log(`Menu items: ${lunches.join(', ')}`);
 
 };
-
-
-
-** end of script.js **
-

@@ -1,5 +1,3 @@
-** start of script.js **
-
 let str;
 
 function reverseString(str) {
@@ -15,6 +13,3 @@ function reverseString(str) {
     return lastChar + reverseString(middle) + firstChar;
 
 };
-
-** end of script.js **
-
