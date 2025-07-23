@@ -1,7 +1,7 @@
 /* Build a Fortune Teller
 
-In this lab, you will define five fortunes and randomly select one of them to display the fortune to the user.
-Fulfill the user stories below and get all the tests to pass to complete the lab.
+We will define five fortunes and randomly select one of them to display the fortune to the user.
+This is a simple exercise to practice using variables, random number generation, and conditional statements in JavaScript.
 
 User Stories:
 You should initialize the five variables fortune1, fortune2, fortune3, fortune4, and fortune5 with a string value of your choice. 
@@ -71,12 +71,10 @@ const fortunes = [
 
 // Secondly, we generate a random number to correspond to index (0 to 4)
 const randomNum = Math.floor(Math.random() * fortunes.length); 
-// The random math method gives both floats and integers.
-// To combat this, we combine it with the floor method to round the number town to nearest whole number.
+// The random math method gives both floats and integers. To combat this, we combine it with the floor method to round the number town to nearest whole number.
 // This leaves us with 5 real options (0, 1, 2, 3, 4) ---> Which correspond to the fortunes Array in the context of indices.
 
-// The code defines the random Number generator (randomNum) as the floor method, and within the floor method is...
-// the random method which works on the length of the fortunes array (5 options, index 0 to 4.)
+// The code defines the random Number generator (randomNum) as the floor method, and within the floor method is the random method which works on the length of the fortunes array (5 options, index 0 to 4.)
 
 // We will use the random index to pick a fortune from the fortune array.
 // Bracket notation will be used to select an index.
