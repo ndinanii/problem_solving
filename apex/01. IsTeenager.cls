@@ -1,0 +1,8 @@
+public class IsTeenager {
+    // Checks if age is between 13-19
+    public static Boolean checkTeenager(Integer age) {
+        return age >= 13 && age <= 19;
+    }
+}
+ // Should return true
+ 

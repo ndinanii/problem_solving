@@ -14,3 +14,12 @@ function absoluteDifference(num1, num2) {
     return 0; // If both numbers are equal
 }
 console.log(absoluteDifference(10, 10));
+
+
+// Second Method: Quicker way to calculate absolute difference
+function absoluteDifferenceQuick(num1, num2) {
+    if (num1 === undefined || num2 === undefined) {
+        return "Please provide two numbers.";
+    }
+    return Math.abs(num1 - num2);
+}
