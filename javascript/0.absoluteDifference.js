@@ -48,5 +48,36 @@ console.log(sumEquals(1, 2, 4)); // false
 // For our purposes, two equal numbers will be considered to be in an ascending order.
 
 function ascendingOrder(a, b, c) {
-    
+    if (a <= b && b <= c) {
+        return true;
+    }
+    else return false;
 }
+console.log(ascendingOrder(1, 2, 3)); // true
+console.log(ascendingOrder(3, 2, 1)); // false
+
+
+// Given a work, prepend it with the correct indefinite article ("a" or "an") 
+// followed by a space based on the following rule: words starting with a vowel (a, e, i, o, or u) are prepended with "an", 
+// while words starting with any other letter are prepended with "a".
+
+function aOrAn(word) {
+    if (word[0] === 'a' || word[0] === 'e' || word[0] === 'i' || word[0] === 'o' || word[0] === 'u') {
+        return "an " + word;
+    }
+    else {
+        return "a " + word;
+    }
+}
+console.log(aOrAn("apple")); // an apple
+console.log(aOrAn("banana")); // a banana
+
+
+//isBoolean function
+let isBoolean;
+function booWho(isBoolean){
+  if (isBoolean === true || isBoolean === false) return true;
+  else return false;
+};
+
+console.log()
