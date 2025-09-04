@@ -30,7 +30,6 @@ console.log(absoluteDifferenceQuick(2, 8))
 //  SUM EQUALS: PROBLEM
 
 
-
 function sumEquals(num1, num2, num3){
     if (num1 === undefined || num2 === undefined || num3 === undefined) {
         return "Please provide three numbers."
@@ -80,4 +79,11 @@ function booWho(isBoolean){
   else return false;
 };
 
-console.log()
+let tempC;
+
+function convertCtoF(tempC){
+  const tempF = tempC * (9/5) + 32;
+  return tempF;
+}
+
+console.log(convertCtoF(25));
