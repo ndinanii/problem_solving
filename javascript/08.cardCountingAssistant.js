@@ -66,23 +66,18 @@ let count = 0;
 let count = 0;
 
 function cc(card) {
-    if (card >=2 && card <=6){
-        count = count + 1;
-    }
+  if (card >= 2 && card <= 6) {
+    count++;
+  } else if (card === 10 || card === "J" || card === "Q" || card === "K" || card === "A") {
+    count--;
+  }
 
-    if (card >= 7 && card <= 9){
-        count = count + 0;
-        return count + " Hold";
-    }
-    if (card === 10 || card === 'J' || card === 'Q' || card === 'K' || card === 'A') {
-        count = count - 1;
-        return count + " Hold";
-    }
-
-    if (count > 0){
-        return count + " Bet";
-    }
-    else return count + " Hold";
+  // Return the count and the betting decision
+  if (count > 0) {
+    return count + " Bet";
+  } else {
+    return count + " Hold";
+  }
 }
 
-console.log(cc(10))
+console.log(cc("J"));
