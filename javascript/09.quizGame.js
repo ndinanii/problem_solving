@@ -58,5 +58,5 @@ function getRandomQuestion(arrOfQuestions){
 }
 
 function getRandomComputerChoice(choices){
-  const choices = 
+  
 }
