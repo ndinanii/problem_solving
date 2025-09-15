@@ -36,64 +36,48 @@ const questions = [
   }
 ];
 
-// Questions in an array.
-const arrOfQuestions = [questions[0].question, questions[1].question,
-questions[2].question, questions[3].question, questions[0].question];
-
-
-// Choices in an array. 
-const arrOfChoices = [questions[0].choices, questions[1].choices, questions[2].choices,
-questions[3].choices, questions[4].choices];
-
-
-
 // Function to select a random question
-function getRandomQuestion(arrOfQuestions){
+function getRandomQuestion(questions){
     // How to randomize selection
-    const questionRandomizer = Math.floor(Math.random() * arrOfQuestions.length);
+    const questionRandomizer = Math.floor(Math.random() * questions.length);
     
     // Give back a randomly selected question
-    return arrOfQuestions[questionRandomizer];
+    return questions[questionRandomizer];
 
 }
 
 // Function to select a random choice
-function getRandomComputerChoice (arrOfChoices){
+function getRandomComputerChoice (choices){
 
     // How to randomize selection
-    const choiceRandomizer = Math.floor(Math.random() * arrOfChoices.length);
+    const choiceRandomizer = Math.floor(Math.random() * choices.length);
 
     // Give back a randomly selected array of choices
-    return arrOfChoices[choiceRandomizer];
+    return choices[choiceRandomizer];
+}
 
-    // From randomly selected Array of choices, give back one random choice
-    const selectedChoiceRandomizer = Math.floor(Math.random())
-
+function getResults(question, computerChoice) {
+  if (computerChoice === question.answer) {
+    return "The computer's choice is correct!";
+  } else {
+    return `The computer's choice is wrong. The correct answer is: ${question.answer}`;
+  }
 }
 
 
-const questionObject = getRandomQuestion(arrOfQuestions);
-const computersChoice = getRandomComputerChoice(arrOfChoices);
+// Pick a random question
+const questionObject = getRandomQuestion(questions);
 
+// Computer picks a random choice from that question
+const computerChoice = getRandomComputerChoice(questionObject.choices);
 
+// Get result
+const result = getResults(questionObject, computerChoice);
 
+// Show it
+console.log("Category:", questionObject.category);
+console.log("Question:", questionObject.question);
+console.log("Choices:", questionObject.choices);
+console.log("Computer's Choice:", computerChoice);
+console.log(result);
 
-
-
-
-
-
-// function getRandomQuestion(question){
-
-//     // Get the object's property names (keys) as an array
-//     const propertyNames = Object.keys(arrOfQuestions)
-
-//     // Method to randomize within the range of the propertyNames array's length
-//     
-
-//     // Random Question to return 
-//     const randomPropertyName = arrOfQuestions[questionRandomizer];
-
-//     return randomPropertyName;
-    
-// }
