@@ -36,27 +36,64 @@ const questions = [
   }
 ];
 
+// Questions in an array.
+const arrOfQuestions = [questions[0].question, questions[1].question,
+questions[2].question, questions[3].question, questions[0].question];
 
 
+// Choices in an array. 
+const arrOfChoices = [questions[0].choices, questions[1].choices, questions[2].choices,
+questions[3].choices, questions[4].choices];
+
+
+
+// Function to select a random question
 function getRandomQuestion(arrOfQuestions){
-
-    // Where are the questions?
-    const arrOfQuestions = [questions[0].question, questions[1].question, 
-    questions[2].question, questions[3].question, questions[0].question];
-
-    // Get the object's property names (keys) as an array
-    const propertyNames = Object.keys(arrOfQuestions)
-
-    // Method to randomize within the range of the propertyNames array's length
+    // How to randomize selection
     const questionRandomizer = Math.floor(Math.random() * arrOfQuestions.length);
-
-    // Random Question to return 
-    const randomPropertyName = arrOfQuestions[questionRandomizer];
-
-    return randomPropertyName;
     
+    // Give back a randomly selected question
+    return arrOfQuestions[questionRandomizer];
+
 }
 
-function getRandomComputerChoice(choices){
-  
+// Function to select a random choice
+function getRandomComputerChoice (arrOfChoices){
+
+    // How to randomize selection
+    const choiceRandomizer = Math.floor(Math.random() * arrOfChoices.length);
+
+    // Give back a randomly selected array of choices
+    return arrOfChoices[choiceRandomizer];
+
+    // From randomly selected Array of choices, give back one random choice
+    const selectedChoiceRandomizer = Math.floor(Math.random())
+
 }
+
+
+const questionObject = getRandomQuestion(arrOfQuestions);
+const computersChoice = getRandomComputerChoice(arrOfChoices);
+
+
+
+
+
+
+
+
+
+// function getRandomQuestion(question){
+
+//     // Get the object's property names (keys) as an array
+//     const propertyNames = Object.keys(arrOfQuestions)
+
+//     // Method to randomize within the range of the propertyNames array's length
+//     
+
+//     // Random Question to return 
+//     const randomPropertyName = arrOfQuestions[questionRandomizer];
+
+//     return randomPropertyName;
+    
+// }
