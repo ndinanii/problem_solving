@@ -37,6 +37,3 @@ function updateRecords(records, id, prop, value) {
 
   return records;
 }
-
-// const fruits = ["Banana", "Orange", "Apple"];
-// fruits[fruits.length] = "Lemon";
