@@ -1,3 +1,10 @@
+// Each object has four keys:
+// category → The subject area of the question (string)
+// question → The actual quiz question (string).
+// choices → An array of possible answers (multiple strings).
+// answer → The correct answer (must be one of the choices).
+// This structure keeps all the info for each question bundled together, making it easy to retrieve.
+
 const questions = [
   {
     category: "Science",
