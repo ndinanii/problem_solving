@@ -26,21 +26,53 @@ let contacts = [
 ];
 
 
-function lookUpProfile (name, prop){
-    for (let contact of contacts){
-        // Store current value of contacts object in contact. 
-        // Inside the profile, find the name and compare it to the firstName.
-        if (name === contact.firstName){
-          if (prop in contact){
-            return contact[`${prop}`]
-          }
-          if (prop !== contact[`${prop}`]){
-            return "No such property"
-          }
-          
-        }
-        if (name !== contact.firstName || name === undefined) return "No such contact"
+function lookUpProfile(name, prop) {
+  for (let contact of contacts) {
+    if (contact.firstName === name) {
+      if (prop in contact) {
+        return contact[prop];
+      } else {
+        return "No such property";
+      }
     }
+  }
+  return "No such contact";
 }
 
-console.log(lookUpProfile("Kristian", "likes"))
+console.log(lookUpProfile("Alexn", "likes"));
+
+/*
+1. What is contacts?
+
+An array of objects. Each object represents a person, with firstName, lastName, number, and likes (which is an array).
+Think of it like a list of people, where each person has some data.
+
+2. What does lookUpProfile(name, prop) do?
+
+You want to:
+Look through every contact.
+Check if the firstName matches the name parameter.
+If yes, then:
+Check if that contact has the property you’re asking for.
+If so, return its value.
+If not, return "No such property".
+If you get through all the contacts and none match, return "No such contact".
+
+3. Understanding the for...of loop
+This goes through every contact (object) in the contacts array one by one, 
+assigning each one to the variable contact.
+
+4. if (contact.firstName === name)
+
+We're checking:
+Does this contact's first name match the name we’re looking for?
+If yes — we found the right contact.
+
+5. Checking if a property exists
+This checks: Does the object have a key named prop?
+If yes — return the value of that property:
+
+6. What if we never find the contact?
+If the loop finishes and never hits a match for firstName, 
+then this line at the end runs: "No such contact"
+*/
